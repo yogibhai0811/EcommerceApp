@@ -1,0 +1,36 @@
+.loading__container {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  position: absolute;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.line__container {
+  display: flex;
+  gap: 10px;
+}
+.line {
+  height: 36px;
+  width: 16px;
+  background-color: #0096ff;
+  animation: load 400ms infinite ease-in-out alternate;
+  border-radius: 10px;
+}
+.line__container .line:nth-child(2) {
+  animation-delay: 100ms;
+}
+.line__container .line:nth-child(3) {
+  animation-delay: 200ms;
+}
+.line__container .line:nth-child(4) {
+  animation-delay: 300ms;
+}
+@keyframes load {
+  to {
+    transform: translateY(24px);
+  }
+}
